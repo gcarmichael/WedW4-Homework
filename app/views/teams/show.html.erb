@@ -3,6 +3,13 @@
 
 <%= image_tag(@team.image, alt:'No image', width: 200) %>
 
+<p>
+  <% @team.players.each do |player| %>
+  Players: <%= player.name %>
+  <br>
+  <% end %>
+</p>
+
 <% @team.sponsors.each do |sponsor| %>
-  <p>Sponsor: <%= sponsor.name %></p>
+<p>Sponsor: <%= sponsor.name %></p>
 <% end %>

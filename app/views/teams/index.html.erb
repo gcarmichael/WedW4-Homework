@@ -1,12 +1,27 @@
 <h1>Teams</h1>
 
 <% @teams.each do |team| %>
-  <%= team.name %> was founded in <%= team.founded %>.
-  <br>
-  <%= link_to("Show #{team.name}", team_path(team)) %>
-  <br>
-  <%= link_to("Edit Team", edit_team_path(team)) %>
-  <br>
-  <%= button_to('Delete Team', team_path(team), method: :delete, data: {confirm: 'Do you wish to delete this team?'}) %>
-  <br>
+<%= team.name %> was founded in <%= team.founded %>.
+<br>
+<%= link_to("Show #{team.name}", team_path(team)) %>
+<br>
+<%= link_to("Edit Team", edit_team_path(team)) %>
+<br>
+<%= button_to('Delete Team', team_path(team), method: :delete, data: {confirm: 'Do you wish to delete this team?'}) %>
+<br>
 <% end %>
+
+<h1>Players</h1>
+
+<p>
+  <% @players.each do |player| %>
+  Name: <%= player.name %>
+  <br>
+  Age: <%= player.age %>
+  <br>
+  Position: <%= player.position %>
+  <br>
+  <br>
+  <% end %>
+  <br>
+</p>
