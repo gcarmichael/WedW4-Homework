@@ -1,0 +1,34 @@
+<h1>Create a New Team</h1>
+
+<%= form_for @team do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+  <br>
+
+  <%= f.label :founded %>
+  <%= f.date_field :founded %>
+  <br>
+
+  <%= f.label :mascot %>
+  <%= f.text_field :mascot %>
+  <br>
+
+  <%= f.label :ground %>
+  <%= f.text_field :ground %>
+  <br>
+
+  <%= f.label :league %>
+  <%= f.text_field :league %>
+  <br>
+
+  <%= f.label :last_position %>
+  <%= f.text_field :last_position %>
+  <br>
+
+  <%= f.submit 'Create Team!' %>
+
+<% end %>
